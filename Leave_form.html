@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Leave Form</title>
+  <style>
+    body {
+      margin: 8px;
+      padding: 12px;
+      border: 3px double black;
+    }
+    
+    .logo {
+      display: flex;
+    }
+    
+    .logo-context {
+      line-height: 1px;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .logo-context h5 {
+      font-size: 11px;
+    }
+    
+    form {
+      width: 100%;
+    }
+    
+    .head {
+      display: flex;
+    }
+    
+    .heading {
+      border: 1px solid black;
+      padding: 8px;
+      font-weight: 600;
+      font-size: 24px;
+      margin: auto auto;
+    }
+    
+    .rows {
+      padding: 10px 0;
+    }
+    
+    #name,
+    #date,
+    #designation,
+    #dept,
+    #cl,
+    #ll,
+    #apl,
+    #from,
+    #to,
+    #nature,
+    #reason,
+    #ph,
+    #pri {
+      background: transparent;
+      border: none;
+      border-bottom: 1px dotted black;
+    }
+    
+    #name,
+    #designation {
+      width: 50%;
+    }
+    
+    #date,
+    #reason,
+    #nature {
+      width: 30%;
+    }
+    
+    #cl {
+      width: 20%;
+    }
+    
+    #apl {
+      width: 15%;
+    }
+    
+    .box {
+      border: 2px solid black;
+      padding: 30px;
+      margin: 10px;
+    }
+    
+    .row1 {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 20px;
+    }
+    
+    .row2 {
+      padding-top: 20px;
+      margin-left: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="/logo.png" alt="logo">
+    <div class="logo-context">
+      <h3>KKR & KSR INSTITUTE OF TECHNOLOGY & SCIENCES</h3>
+      <h4>VINJANAMPADU,VATTICHERUKURU, GUNTUR-522017</h4>
+      <h5>(Approved by AICTE,New Delhi★Permenantely Affiliated to JNTUK, Kakinada)</h5>
+      <h6>(NBA Accredited -B.Tech:CSE|ECE|EEE|MECH★ Accredited with 'A'Grade by NAAC)</h6>
+    </div>
+  </div>
+  <hr />
+  <div class="head">
+    <span class="heading">Application for leave</span>
+  </div>
+  <form action="" method="post">
+    <div class="rows">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" />
+    </div>
+    <div class="rows">
+      <label for="designation">Designation</label>
+      <input type="text" name="designation" id="designation" />
+      <label for="dept">Dept</label>
+      <input type="text" name="dept" id="dept" />
+    </div>
+    <div class="rows">
+      <label for="cl">No of days used C.Ls</label>
+      <input type="number" name="cl" id="cl" />
+      <label for="ll">No of days used L.L.Ps</label>
+      <input type="number" name="ll" id="ll" />
+    </div>
+    <div class="rows">
+      <label for="apl">No of days Leave applied:</label>
+      <input type="number" name="apl" id="apl" />
+      <label for="from">From/On</label>
+      <input type="date" name="from" id="from" />
+      <label for="to">To</label>
+      <input type="date" name="to" id="to" />
+    </div>
+    <div class="rows">
+      <label for="nature">Nature of Leave:</label>
+      <input type="text" name="nature" id="nature" />
+      <label for="reason">Reason for Leave</label>
+      <input type="text" name="reason" id="reason" />
+    </div>
+  </form>
+  <div class="box">
+    <div class="row1">
+      <span class="sign">Signature of the applicant</span>
+      <div>
+        <span>Contant Phone No:</span>
+        <input type="number" id="ph">
+      </div>
+    </div>
+    <hr />
+    <div class="row1">
+      <span class="sign">Signature of Head of Dept.</span>
+      <div>
+        <span>Principal:</span>
+        <input type="text" id="pri">
+      </div>
+    </div>
+    <hr />
+    <div class="row2">
+      <span>work adjustment</span>
+    </div>
+    
+  </div>
+</body>
+
+</html>
