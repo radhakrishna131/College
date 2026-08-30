@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>poster-1</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Lobster&display=swap');
+    
+    
+    @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+    
+    
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    
+    .card {
+      background-image: url("assets/background.png");
+      background-size: cover;
+      max-width: 480px;
+      max-height: 98vh;
+      height: 100%;
+      padding: 12px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+    }
+    
+    .logo-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .logo-section .naac {
+      margin-top: -10px;
+    }
+    
+    .logo {
+      border-radius: 12px;
+      background: white;
+      padding: 8px 14px;
+      box-shadow: 5px 3px 4px #000;
+    }
+    
+    .welcome-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    
+    .grad_sticker-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 8px;
+    }
+    
+    .grad_sticker-content p {
+      color: #fff;
+      font-weight: 500;
+      margin-top: -15px;
+      margin-left: 70px;
+      font-size: 10px;
+      background: #A10000;
+      
+    }
+    
+    .grad_sticker-content img {
+      height: 80px;
+    }
+    
+    .guest {
+      border-radius: 50%;
+      width: 50%;
+    }
+    
+    .heartly {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 12px;
+      text-align: center;
+    }
+    
+    .heartly h1 {
+      color: #fff;
+      text-align: center;
+      font-family: "Niconne", cursive;
+      
+      
+      font-weight: 500;
+      font-size: 38px;
+    }
+    
+    .heartly span {
+      border: 1px solid gold;
+      border-radius: 23px;
+      color: #fff;
+      width: 40%;
+      padding: 4px;
+      font-weight: 600;
+    }
+    
+    .guest-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      margin-top: 8%;
+      text-align: center;
+    }
+    
+    .guest-content img {
+      border: 2px groove gold;
+    }
+    
+    .guest-content h2 {
+      margin: 8px;
+      color: gold;
+    }
+    
+    .guest-content small {
+      font-size: 12px;
+      margin-top: 0;
+    }
+    
+    .footer-content {
+      width: 100%;
+    }
+    
+    .footer-content h5 {
+      text-align: center;
+      text-wrap: nowrap;
+      font-family: "Anton", sans-serif;
+      letter-spacing: 0px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #BF0000;
+      background-color: white;
+      padding: 12px;
+      margin: 20% -12px 8px -12px;
+      /*top-right-bottom-left*/
+    }
+    
+    .footer-content p {
+      font-size: 6px;
+      color: #fff;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+    
+    .footer-content p span {
+      color: gold;
+      font-weight: 500;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .card {
+        transform: scale(2.6);
+        transform-origin: top left;
+        width: 83.33%;
+        /* 100 / 1.2 */
+        
+      }
+    }
+    
+    /* Laptops (1366px) */
+    @media (min-width: 1024px) and (max-width: 1440px) {
+      .card {
+        transform: scale(3.6);
+        transform-origin: top left;
+        width: 83.33%;
+        /* 100 / 1.2 */
+      }
+    }
+    
+    /* Large laptops/desktops (1440px+) */
+    @media (min-width: 1441px) {
+      .card {
+        transform: scale(3.6);
+        transform-origin: top left;
+        width: 83.33%;
+        /* 100 / 1.2 */
+      }
+    }
+  </style>
+  
+</head>
+
+<body>
+  <section class="card">
+    <div class="logo-section">
+      <span><img src="assets/NBA.png" alt="nba" width="40px"></span>
+      <span><img src="assets/logo.png" alt="logo.png" width="80px" class="logo" /></span>
+      <span><img src="assets/NAAC.jpg" alt="naac" width="60px" class="naac"></span>
+    </div>
+    <div class="Welcome-content">
+      <div class="grad_sticker-content">
+        <img src="assets/grad_sticker.png" alt="grad" />
+        <p>Batch of 2022-2026</p>
+      </div>
+      <div class="heartly">
+        <h1>Heartly welcome</h1>
+        <span>Guest of Honour</span>
+      </div>
+      <div class="guest-content">
+        <img src="assets/guest.png" alt="guest" class="guest" />
+        <h2>Sri Narra suresh</h2>
+        <small>Delivery manager and developer centre head infosys, Andhra Pradesh</small>
+      </div>
+      <div class="footer-content">
+        <div style="background: red;" width="100%">
+          <h5>KKR & KSR INSTITUTE OF TECHNOLOGY AND SCIENCES</h5>
+        </div>
+        
+        <p><span>UGC</span> AUTONOMOUS STATUS | <span>NBA</span> Accreditation | ACCREDITED WITH <span>"A"</span> Grade by <span>NAAC</span> Permanently Affiliated to <span>JNTUK</span> Kakinada | Approved by <span>AICTE</span>, New Delhi</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

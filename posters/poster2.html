@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>poster-2</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+.poster-bg{
+  background-image: url("assets/background.png");
+  background-size: cover;
+  max-width: 480px;
+  max-height: 98vh;
+  height: 100%;
+  padding: 12px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+.poster{
+  border: 1px solid #BF0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.quote{
+  padding: 10px;
+  width: 55%;
+  font-weight: 500;
+  font-size: 14px;
+}
+.grad_sticker-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+}
+.grad_sticker-content p{
+  color: #fff;
+  font-weight: 500;
+  margin-top: -15px;
+  margin-left: 70px;
+  font-size: 10px;
+  background: #8E0404;
+  padding-right: 4px;
+
+}
+.grad_sticker-content img{
+  height: 80px;
+}
+.venue{
+  width: 80%;
+  font-size: 6px;
+  text-align: center;
+  margin: auto;
+}
+/*.sticker h1{
+  background: linear-gradient(to top, #F3D672, #AD7844);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Niconne", cursive;
+  margin: 4px 0;
+  font-size: 28px;
+}*/
+.items{
+  margin: 6px 0 0 0;
+}
+.headline{
+  border: 1px solid gold;
+  border-radius: 10px;
+  padding: 4px 8px;
+  color: #fff;
+  margin: 2px;
+}
+.items h1,.name{
+  font-size: 12px;
+  color: gold;
+  margin-bottom: 2px;
+}
+.items span{
+  color: white;
+  font-size: 8px;
+}
+.items p{
+  margin: 0;
+  font-size: 8px;
+}
+.remain{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 60px;
+}
+.footer{
+  background: white;
+  width: 100%;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+.footer h5{
+  color: #930000;
+  font-weight: 600;
+  font-size: 8px;
+  margin: 4px;
+  
+}
+.footer p{
+  color: #000;
+  font-size: 8px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .poster-bg{
+  transform: scale(2.6);
+  transform-origin: top left;
+  width: 83.33%; /* 100 / 1.2 */
+
+  }
+}
+
+/* Laptops (1366px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .poster-bg{
+  transform: scale(3.6);
+  transform-origin: top left;
+  width: 83.33%; /* 100 / 1.2 */
+}
+}
+
+/* Large laptops/desktops (1440px+) */
+@media (min-width: 1441px) {
+  .poster-bg {
+  transform: scale(3.6);
+  transform-origin: top left;
+  width: 83.33%;
+  /* 100 / 1.2 */
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="poster-bg">
+    <div class="poster">
+      <span class="quote">You are cordially invited
+to grace the prestigious</span>
+<div class="grad_sticker-content">
+        <img src="assets/grad_sticker.png" alt="" />
+        <p><b>Batch of 2022-2026</b></p>
+      </div>
+<div class="sticker">
+  
+  <!--<h1>3<sup>rd</sup> Graduation Day</h1>-->
+  <p class="venue">on Saturday <b>22</b><sup>
+    nd
+  </sup> August, 2026 at 6.00 pm
+Venue: <b>KITS</b> Campus</p>
+</div>
+<div class="items">
+  <span class="headline">Welcome Address</span>
+  <h1>DR. KOYE SUBBA RAO</h1>
+  <p>Chairman</p>
+  <span>KKR & KSR Institute of Technology and Sciences</span>
+</div>
+<div class="items">
+  <span class="headline">Benediction</span>
+  <h1>SRI KOYI SEKHAR</h1>
+  <p>Secretary</p>
+  <span>KKR & KSR Institute of Technology and Sciences</span>
+</div>
+<div class="items">
+  <span class="headline">Chief Guest</span>
+  <h1>PROF. CHEKURI SIVA RAMA KRISHNA PRASAD</h1>
+  <span>Hon'ble Vice Chancellor, JNTUK, Kakinada</span>
+</div>
+<div class="items">
+  <span class="headline">Guest of Honour</span>
+  <h1>SRI NARRA SURESH</h1>
+  <span>Delivery Manager & Development Centre Head
+Infosys, Andhra Pradesh</span>
+</div>
+<div class="remain">
+  <div>
+    <h1 class="name">DR. K. HARIBABU</h1>
+  <span>Director</span>
+  </div>
+  <hr>
+  <div>
+    <h1 class="name">DR. P. BABU</h1>
+<span>Principal</span>
+  </div>
+</div>
+<div class="footer">
+  <img src="assets/logo.png" alt="logo" height="50px"/>
+  <div class="">
+    <h5>KKR & KSR INSTITUTE OF TECHNOLOGY AND SCIENCES</h5>
+<p>Vinjanampadu, vatticherukuru mandal, Guntur</p>
+  </div>
+    </div>
+  </div>
+</body>
+
+</html>
