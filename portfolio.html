@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Radha Krishna</title>
+  <meta name="description" content="BTech CS AI/ML student at KKR & KSR. Building free tools for Indian students." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Dancing+Script:wght@500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+  <style>
+    *, *::before, *::after {  margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --black: #000000;
+      --surface: #111111;
+      --border: #222222;
+      --text: #ffffff;
+      --muted: #999999;
+      --dim: #555555;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+      width: 100%;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+    }
+
+    .nav-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      border: 1.5px solid #333;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 60px 24px 0;
+      text-align: center;
+    }
+
+    .hero-cursive {
+      font-family: 'Dancing Script', cursive;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-family: 'Courier Prime', monospace;
+      font-size: clamp(34px, 9vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      padding: 0 8px;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 0;
+    }
+
+    .btn-solid {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      background: #2a2a2a;
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .btn-ghost {
+      display: block;
+      width: 100%;
+      padding: 14px 24px;
+      background: transparent;
+      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ── HERO ILLUSTRATION ── */
+    .hero-illustration {
+      width: 100%;
+      margin-top: 40px;
+      position: relative;
+    }
+
+   
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── PORTFOLIO SECTION ── */
+    .portfolio {
+      padding: 60px 24px 0;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .portfolio h2 {
+      font-family: 'Courier Prime', monospace;
+      font-size: clamp(30px, 8vw, 46px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .portfolio > p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      padding: 0 4px;
+    }
+
+    /* ── PROJECT CARDS ── */
+    .project-card {
+      background: #111;
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .project-card-text {
+      padding: 24px 24px 20px;
+    }
+
+    .project-card-title {
+      font-family: 'Courier Prime', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .project-card-desc {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-card-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    
+    /* ── ABOUT SECTION ── */
+    .about {
+      padding: 60px 24px 0;
+    }
+
+    .about .section-eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .about h2 {
+      font-family: 'Courier Prime', monospace;
+      font-size: clamp(28px, 8vw, 42px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .about p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .about-btns {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .about-illustration {
+      margin-top: 48px;
+      width: 100%;
+    }
+
+    
+
+    /* ── CONTACT SECTION ── */
+    .contact {
+      padding: 60px 24px 60px;
+      text-align: center;
+    }
+
+    .contact .section-eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .contact h2 {
+      font-family: 'Courier Prime', monospace;
+      font-size: clamp(36px, 10vw, 54px);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .contact > p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      padding: 0 8px;
+    }
+
+    .contact-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    
+
+    .contact-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--dim);
+      padding-bottom: 2px;
+    }
+
+    .contact-separator {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px 32px;
+    }
+
+    .footer-logo {
+      font-family: 'Courier Prime', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--dim);
+      margin-bottom: 32px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: var(--dim);
+    }
+
+    
+
+    @media (min-width: 600px) {
+      .hero-btns {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .btn-solid {
+        width: auto;
+        padding: 14px 32px;
+      }
+      .btn-ghost {
+        width: auto;
+        padding: 14px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-avatar">
+      <i class="ph-fill ph-user"></i>
+    </div>
+    <div class="nav-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-cursive">Radha Krishna</span>
+    <h1>Your go-to student for AI/ML projects</h1>
+    <p>Building useful things with code. Whether it's a free platform for students, redesigning a government portal, or learning ML from scratch.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-solid">Contact me</a>
+      <a href="#projects" class="btn-ghost">View projects</a>
+    </div>
+
+    
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="projects">
+    <div class="section-eyebrow">Portfolio</div>
+    <h2>Discover what I've created</h2>
+    <p>Each project reflects my passion for building things that actually help students. Feel free to explore and get inspired!</p>
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-card-text">
+        <div class="project-card-title">Must Material</div>
+        <p class="project-card-desc">A free platform for Indian students — notes, study material, and resources. No login needed, just open and learn.</p>
+      </div>
+      <div class="project-card-image">
+        <img src="images/project.jpg" alt="images/project.jpg">
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-eyebrow">About</div>
+    <h2>Student who loves to build stuff</h2>
+    <p>Hello! I'm Radha Krishna, a first-year BTech CS (AI/ML) student at KKR & KSR Institute of Technology & Sciences, Guntur, Andhra Pradesh.</p>
+    <p>I started Must Material because good, free study resources shouldn't be hard to find. I just built what I wished existed. That's how I think — if something is missing, make it.</p>
+
+    <div class="about-btns">
+      <a href="#contact" class="btn-solid">Contact me</a>
+      <a href="#projects" class="btn-ghost">View projects</a>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-eyebrow">Contact me</div>
+    <h2>Let's talk!</h2>
+    <p>Feel free to reach out! I'm here to connect and will respond within 24 hours. Whether it's about a project, collaboration, or just saying hi!</p>
+
+    <hr class="contact-divider" />
+
+    <!-- GitHub -->
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="ph-fill ph-github-logo"></i>
+      </div>
+      <div class="contact-label">GitHub</div>
+      <a href="https://github.com/radhakrishna131" target="_blank" class="contact-value">github.com/radhakrishna131</a>
+    </div>
+
+    <hr class="contact-separator" />
+
+    <!-- LinkedIn -->
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="ph ph-linkedin-logo"></i>
+      </div>
+      <div class="contact-label">LinkedIn</div>
+      <a href="https://linkedin.com/in/radhakrishna-sure" target="_blank" class="contact-value">Radhakrishna Sure</a>
+    </div>
+
+    <hr class="contact-separator" />
+
+    <!-- Location -->
+    <div class="contact-item">
+      <div class="contact-icon">
+        <i class="ph ph-map-pin"></i>
+      </div>
+      <div class="contact-label">College</div>
+      <span class="contact-value">KKR & KSR, Guntur, Andhra Pradesh</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" class="footer-logo">RK.</a>
+    <p class="footer-tagline">BTech CS (AI/ML) · KKR & KSR · vinjanampadu • Guntur</p>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About me</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright 2026 © Radha Krishna</p>
+      
+    </div>
+  </footer>
+
+</body>
+</html>
